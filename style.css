@@ -332,7 +332,7 @@ section{
    align-items: flex-start ;  
    border-radius: inherit ;  
    justify-content: flex-end ;  
-   background-color: gray ;  
+   background-color: purple ;  
    padding: .95em 0.6em 0 1.2em ;  
    box-shadow: 0 2px 6px 1px #0000001f ;  
    transition: height var(--cubic-header), box-shadow var(--duration), padding var(--duration) ease-in-out ;  
