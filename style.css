@@ -23,7 +23,7 @@ header{
 
 .logo{
     text-decoration: none;
-    color: blue;
+    color: red ;
     font-weight: 700;
     font-size: 1.8em; 
     
@@ -124,7 +124,7 @@ background-color: rgba(0, 0, 1, 0.4);
 
 
 .navigation a {
-    color: blue;
+    color: orange ;
     text-decoration: none;
     font-size: 1.1 em;
     font-weight: 500;
@@ -132,7 +132,7 @@ background-color: rgba(0, 0, 1, 0.4);
 
 }
 .navigation a:hover {
-    color : #606060  
+    color : red 
 }
 
 section{
@@ -164,7 +164,7 @@ section{
 
 }
 .social-icons a {
-    color: #fff;
+    color: red;
     font-size: 1.7em;
     padding-right: 30px;
 }
