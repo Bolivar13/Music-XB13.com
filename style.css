@@ -111,6 +111,19 @@ header{
 
     }
 
+
+  .log-in a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 2px;
+    
+    
+  }
+
+
+
 .form-sign{
 color: white;
 background-color: rgba(0, 0, 1, 0.4);
