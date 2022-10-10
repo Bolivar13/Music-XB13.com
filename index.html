@@ -15,7 +15,7 @@
   
 <header>
     
-    <a href="index.html" class="logo">Music X B13</a>
+    <a href="index.html" class="logo">Music X-B13</a>
     <nav class="navigation"> 
         <a href="#Home">Home</a>
         <a href="#Services">Services</a>
@@ -34,7 +34,7 @@
 <section class="main" id="Home">
     <div>
         <h2>  <br><span> Music Distribution for Artists </span></h2>
-        <h3> Distribute your music to Spotify, Apple Music, Google Play, Amazon Music and more. </h3>
+        <h3> Distribute your music to Spotify, Apple Music, Google Play, Amazon Music and more. (Made by Simon BOLIVAR)</h3>
         <a href="" class="main-btn">   </a>
         <div class="social-icons">
             <a href="https://www.reddit.com/user/logan_bng"  style="color: orangered;"  > <i class="fab fa-reddit"  ></i></a>
@@ -44,8 +44,8 @@
             
 <!----------- button start ---------->
             
-        <div class="start" >
-           Get Started
+        <div class="start"  >
+            <a href="signup.html"> Get Started </a>
         </div>
         </div>
     </div>
@@ -252,7 +252,7 @@
             </div>
             <div class="info">
                 <h3>Email</h3>
-                <p>Bolivar@gmail.com</p>
+                <p>bolivarr754@gmail.com</p>
             </div>
         </div>
     </div>
@@ -271,13 +271,6 @@
         
     </div>
 </footer>
-
-
-
-
-
-
-
 
 
 
@@ -315,17 +308,20 @@ const playIcon = playButton.querySelector("img[alt = 'play-icon']");
 const progres = player.querySelector(".progres");  
 const progresFilled = progres.querySelector(".progres__filled");  
 let isMove = false;  
-// creat functions  
+    
+// creatE functions :
 function openPlayer() {  
 playerHeader.classList.add("open-header");  
 playerControls.classList.add("move");  
 slider.classList.add("open-slider");  
 }  
+    
 function closePlayer() {  
 playerHeader.classList.remove("open-header");  
 playerControls.classList.remove("move");  
 slider.classList.remove("open-slider");  
 }  
+    
 function next(index) {  
 count = index || count;  
 if (count == sliderContentLength) {  
@@ -338,6 +334,7 @@ sliderContent.style.transform = `translate3d(-${left}%, 0, 0)`;
 count++;  
 run();  
 }  
+    
 function back(index) {  
 count = index || count;  
 if (count == 0) {  
@@ -349,7 +346,8 @@ left = Math.max(0, left);
 sliderContent.style.transform = `translate3d(-${left}%, 0, 0)`;  
 count--;  
 run();  
-}  
+} 
+    
 function changeSliderContext() {  
 sliderContext.style.animationName = "opacity";  
 sliderName.textContent = playerPlayList[count].querySelector(".player__title").textContent;  
@@ -368,10 +366,12 @@ if (sliderTitle.textContent.length >= 18) {
  sliderTitle.innerHTML = "";  
  sliderTitle.append(textWrap);  
 }  
-}  
+} 
+    
 function changeBgBody() {  
 body.style.backgroundColor = bgBody[count];  
-}  
+} 
+    
 function selectSong() {  
 song = playerSongs[count];  
 for (const item of playerSongs) {  
@@ -382,11 +382,13 @@ for (const item of playerSongs) {
 }  
 if (isPlay) song.play();  
 }  
+    
 function run() {  
 changeSliderContext();  
 changeBgBody();  
 selectSong();  
 }  
+    
 function playSong() {  
 if (song.paused) {  
  song.play();  
@@ -398,7 +400,8 @@ if (song.paused) {
  playIcon.style.display = "";  
  pauseIcon.style.display = "";  
 }  
-}  
+} 
+    
 function progresUpdate() {  
 const progresFilledWidth = (this.currentTime / this.duration) * 100 + "%";  
 progresFilled.style.width = progresFilledWidth;  
@@ -410,12 +413,14 @@ if (count == sliderContentLength && song.currentTime == song.duration) {
  pauseIcon.style.display = "";  
  isPlay = false;  
 }  
-}  
+} 
+    
 function scurb(e) {  
 // If we use e.offsetX, we have trouble setting the song time, when the mousemove is running  
 const currentTime = ( (e.clientX - progres.getBoundingClientRect().left) / progres.offsetWidth ) * song.duration;  
 song.currentTime = currentTime;  
 }  
+    
 function durationSongs() {  
 let min = parseInt(this.duration / 60);  
 if (min < 10) min = "0" + min;  
